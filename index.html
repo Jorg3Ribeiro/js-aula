@@ -13,7 +13,7 @@
             </div>
             <div class="card-toolbar">
               <a
-                onclick="cadastrarAula()"
+                onclick="cadastrar()"
                 class="btn btn-primary font-weight-bolder"
                 >Cadastrar Aulas</a
               >
@@ -90,6 +90,13 @@
               <div class="card-title">
                 <h3 class="card-label">Formulario de Aulas</h3>
               </div>
+              <div class="card-toolbar">
+              <a
+                onclick="cadastrarAula()"
+                class="btn btn-primary font-weight-bolder"
+                >Cadastrar</a
+              >
+            </div>
             </div>
             <div class="card-body">
               <div class="form-group row mt-3">
@@ -97,7 +104,7 @@
                 <div class="col-md-8">
                   <select class="form-select" aria-label="Default select example" id="disciplina">
                     <option selected>Selecione...</option>
-                    <option value="1">One</option>
+                    <option value="1">Programação</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
@@ -113,7 +120,7 @@
                 <div class="col-md-8">
                   <select class="form-select" aria-label="Default select example" id="professor">
                     <option selected>Selecione...</option>
-                    <option value="1">One</option>
+                    <option value="1">Rafael Silva</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
@@ -126,38 +133,66 @@
               </div>
               <div class="form-group row mt-3">
                 <div class="row">
-                  <div class="col-md-10">
+                  <div class="col-md-9">
                     <label class="col-form-label text-md-right" style="margin-left: 2px">Alunos: </label>
                   </div>
                   <div class="col-md-2">
-                    <button id="cdt_alu" onclick="adicionarAluno()" class="btn btn-primary" type="button">
+                    <button id="cdt_aluno" onclick="adicionarAluno()" class="btn btn-primary" type="button">
                       Adicionar Aluno
                     </button>
                   </div>
                 </div>
-                <div class="col-md-1">
-                  <label>Id:</label>
-                   <input type="number" class="form-control" placeholder="Id" name="idAluno">
+                <div class="row">
+                  <div class="col-md-1">
+                    <label>Id:</label>
+                    <input type="number" class="form-control" placeholder="Id" name="idAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label>Nome: </label>
+                    <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label>CPF:</label>
+                    <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Endereço: </label>
+                    <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Telefone: </label>
+                    <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Email: </label>
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                  </div>
                 </div>
-                <div class="col-md-2">
-                  <label>Nome: </label>
-                   <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
-                </div>
-                <div class="col-md-2">
-                  <label>CPF:</label>
-                   <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
-                </div>
-                <div class="col-md-2">
-                  <label> Endereço: </label>
-                   <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
-                </div>
-                <div class="col-md-2">
-                  <label> Telefone: </label>
-                   <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
-                </div>
-                <div class="col-md-2">
-                  <label> Email: </label>
-                   <input type="email" class="form-control" placeholder="email" name="email">
+                <div class="row">
+                  <div class="col-md-1">
+                    <label>Id:</label>
+                    <input type="number" class="form-control" placeholder="Id" name="idAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label>Nome: </label>
+                    <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label>CPF:</label>
+                    <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Endereço: </label>
+                    <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Telefone: </label>
+                    <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
+                  </div>
+                  <div class="col-md-2">
+                    <label> Email: </label>
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                  </div>
                 </div>
               </div>
             </div>
