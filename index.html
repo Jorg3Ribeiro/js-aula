@@ -1,3 +1,84 @@
 <div id="app">
-  <div class="topo"></div>
+  <div class="topo">
+    <span>Aulas</span>
+  </div>
+  <div class="body">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="card card-custom">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label">Cadastro de Aulas</h3>
+            </div>
+            <div class="card-toolbar">
+              <a
+                onclick="cadastrarAula()"
+                class="btn btn-primary font-weight-bolder"
+                >Cadastrar Aulas</a
+              >
+            </div>
+          </div>
+          <div class="card-body">
+            <table
+              class="table table-bordered table-hover table-checkable"
+              id="tabela_aulas"
+              style="margin-top: 13px;"
+            >
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Professor</th>
+                  <th>Disciplina</th>
+                  <th>Alunos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rafael Silva</td>
+                  <td>Programação</td>
+                  <td>
+                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
+                    Mulher do Acaraje;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Nogueira Bento</td>
+                  <td>Logica</td>
+                  <td>
+                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
+                    Mulher do Acaraje;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Jose Osvaldo</td>
+                  <td>Compiladres</td>
+                  <td>
+                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
+                    Mulher do Acaraje;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Bento Carreira</td>
+                  <td>Programação Orientada Objeto</td>
+                  <td>
+                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
+                    Mulher do Acaraje;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
 </div>
