@@ -3,7 +3,7 @@
     <span>Aulas</span>
   </div>
   <div class="body">
-    <div class="row">
+    <div class="tabela_cadastro_aula row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <div class="card card-custom">
@@ -79,6 +79,90 @@
         </div>
       </div>
       <div class="col-md-2"></div>
+    </div>
+    <div class="formulario_cadastro_aula row" style="margin-top: 20px;">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <form id="configuracao_aula" class="form">
+          <div class="card card-custom">
+            <div class="card-header">
+              <div class="card-title">
+                <h3 class="card-label">Formulario de Aulas</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group row mt-3">
+                <label class="col-md-1 col-form-label text-md-right">Disciplina: </label>
+                <div class="col-md-8">
+                  <select class="form-select" aria-label="Default select example" id="disciplina">
+                    <option selected>Selecione...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <button id="cdt_disciplina" onclick="cadastrarDisciplina()" class="btn btn-primary" type="button">
+                    Cadastrar Disciplina
+                  </button>
+                </div>
+              </div>
+              <div class="form-group row mt-3">
+                <label class="col-md-1 col-form-label text-md-right">Professor: </label>
+                <div class="col-md-8">
+                  <select class="form-select" aria-label="Default select example" id="professor">
+                    <option selected>Selecione...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <button id="cdt_professor" onclick="cadastrarProfessor()" class="btn btn-primary" type="button">
+                    Cadastrar Professor
+                  </button>
+                </div>
+              </div>
+              <div class="form-group row mt-3">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label class="col-form-label text-md-right" style="margin-left: 2px">Alunos: </label>
+                  </div>
+                  <div class="col-md-2">
+                    <button id="cdt_alu" onclick="adicionarAluno()" class="btn btn-primary" type="button">
+                      Adicionar Aluno
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <label>Id:</label>
+                   <input type="number" class="form-control" placeholder="Id" name="idAluno">
+                </div>
+                <div class="col-md-2">
+                  <label>Nome: </label>
+                   <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
+                </div>
+                <div class="col-md-2">
+                  <label>CPF:</label>
+                   <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
+                </div>
+                <div class="col-md-2">
+                  <label> Endereço: </label>
+                   <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
+                </div>
+                <div class="col-md-2">
+                  <label> Telefone: </label>
+                   <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
+                </div>
+                <div class="col-md-2">
+                  <label> Email: </label>
+                   <input type="email" class="form-control" placeholder="email" name="email">
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
