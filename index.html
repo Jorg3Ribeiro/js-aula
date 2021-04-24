@@ -3,7 +3,7 @@
     <span>Aulas</span>
   </div>
   <div class="body">
-    <div class="tabela_cadastro_aula row">
+    <div class="row" id="tabela_cadastro_aula">
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <div class="card card-custom">
@@ -12,19 +12,11 @@
               <h3 class="card-label">Cadastro de Aulas</h3>
             </div>
             <div class="card-toolbar">
-              <a
-                onclick="cadastrar()"
-                class="btn btn-primary font-weight-bolder"
-                >Cadastrar Aulas</a
-              >
+              <a onClick="cadastrar()" class="btn btn-primary font-weight-bolder">Cadastrar Aulas</a>
             </div>
           </div>
           <div class="card-body">
-            <table
-              class="table table-bordered table-hover table-checkable"
-              id="tabela_aulas"
-              style="margin-top: 13px;"
-            >
+            <table class="table table-bordered table-hover table-checkable" id="tabela_aulas" style="margin-top: 13px;">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -80,7 +72,7 @@
       </div>
       <div class="col-md-2"></div>
     </div>
-    <div class="formulario_cadastro_aula row" style="margin-top: 20px;">
+    <div class="row" id="formulario_cadastro_aula" style="margin-top: 20px; display: none;">
       <div class="col-md-2">
       </div>
       <div class="col-md-8">
@@ -91,12 +83,8 @@
                 <h3 class="card-label">Cadastro de Aulas</h3>
               </div>
               <div class="card-toolbar">
-              <a
-                onclick="cadastrarAula()"
-                class="btn btn-primary font-weight-bolder"
-                >Cadastrar Aula</a
-              >
-            </div>
+                <a onclick="cadastrarAula()" class="btn btn-primary font-weight-bolder">Cadastrar Aula</a>
+              </div>
             </div>
             <div class="card-body">
               <div class="form-group row mt-3">
@@ -199,38 +187,37 @@
         </form>
       </div>
     </div>
-    <div class="formulario_cadastro_disciplina row" style="margin-top: 20px;">
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-8">
-        <form id="configuracao_aula" class="form">
-          <div class="card card-custom">
-            <div class="card-header">
-              <div class="card-title">
-                <h3 class="card-label">Cadastro de Disciplina</h3>
+  </div>
+  <div class="row" id="formulario_cadastro_disciplina" style="margin-top: 20px; display: none;">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <form id="configuracao_aula" class="form">
+        <div class="card card-custom">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label">Cadastro de Disciplina</h3>
+            </div>
+            <div class="card-toolbar">
+              <a onclick="cadastrarDisciplinaAtiva()" class="btn btn-primary font-weight-bolder">Cadastrar
+                Disciplina</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-group row mt-3">
+              <label class="col-md-1 col-form-label text-md-right">Nome: </label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Nome" name="nomeDisciplina">
               </div>
-              <div class="card-toolbar">
-              <a
-                onclick="cadastrarDisciplinaAtiva()"
-                class="btn btn-primary font-weight-bolder"
-                >Cadastrar Disciplina</a
-              >
-            </div>
-            </div>
-            <div class="card-body">
-              <div class="form-group row mt-3">
-                <label class="col-md-1 col-form-label text-md-right">Nome: </label>
-                <div class="col-md-5">
-                  <input type="text" class="form-control" placeholder="Nome" name="nomeDisciplina">
-                </div>
-                <label class="col-md-1 col-form-label text-md-right">Descrição: </label>
-                <div class="col-md-5">
-                  <input type="text" class="form-control" placeholder="Descrição" name="nomeDescricao">
-                </div>
+              <label class="col-md-1 col-form-label text-md-right">Descrição: </label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Descrição" name="nomeDescricao">
               </div>
             </div>
           </div>
-        </form>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 </div>
