@@ -49,7 +49,8 @@ import "./js/bootstrap.js";
     disciplina.push(nome.value);
 
     for (var i = 0; i < disciplina.length; i++) {
-      selectDisciplina.append('<option value="' + disciplina[i] + '">' + disciplina[i] + '</option');
+      var option = new Option(disciplina[i], disciplina[i]);
+      selectDisciplina.add(option);
     }
 
     formularioDisciplina.style.display = "none";
