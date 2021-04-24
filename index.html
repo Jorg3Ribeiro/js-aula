@@ -3,7 +3,7 @@
     <span>Aulas</span>
   </div>
   <div class="body">
-    <div class="row" id="tabela_cadastro_aula">
+    <div class="row" id="tabela_cadastro_aula" style="display: block;">
       <div class="col-md-8" style="margin-left:18%;">
         <div class="card card-custom">
           <div class="card-header">
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="card-body">
-            <table class="table table-bordered table-hover table-checkable" id="tabela_aulas" style="margin-top: 13px;">
+            <table class="table table-bordered table-hover table-checkable"  style="margin-top: 13px;">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -24,46 +24,8 @@
                   <th>Alunos</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Rafael Silva</td>
-                  <td>Programação</td>
-                  <td>
-                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
-                    Mulher do Acaraje;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>2</td>
-                  <td>Nogueira Bento</td>
-                  <td>Logica</td>
-                  <td>
-                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
-                    Mulher do Acaraje;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>3</td>
-                  <td>Jose Osvaldo</td>
-                  <td>Compiladres</td>
-                  <td>
-                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
-                    Mulher do Acaraje;
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td>Bento Carreira</td>
-                  <td>Programação Orientada Objeto</td>
-                  <td>
-                    Fulano de tal; Roberto Santos; Tia do lanche; Ze pimenta;
-                    Mulher do Acaraje;
-                  </td>
-                </tr>
+              <tbody id="tabela_aulas">
+                
               </tbody>
             </table>
           </div>
@@ -102,9 +64,6 @@
                 <div class="col-md-8">
                   <select class="form-select" aria-label="Default select example" id="professor">
                     <option selected>Selecione...</option>
-                    <option value="1">Rafael Silva</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                   </select>
                 </div>
                 <div class="col-md-3">
@@ -124,56 +83,58 @@
                     </button>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-1">
-                    <label>Id:</label>
-                    <input type="number" class="form-control" placeholder="Id" name="idAluno">
+                <div class="alunos" id="alunosTabela">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label>Id:</label>
+                      <input type="number" class="form-control" placeholder="Id" name="idAluno0" id="idAluno0" value="1">
+                    </div>
+                    <div class="col-md-2">
+                      <label>Nome: </label>
+                      <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno0" id="nameAluno0">
+                    </div>
+                    <div class="col-md-2">
+                      <label>CPF:</label>
+                      <input type="number" class="form-control" placeholder="CPF" name="cpfAluno0" id="cpfAluno0">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Endereço: </label>
+                      <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno0" id="enderecoAluno0">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Telefone: </label>
+                      <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno0" id="telefoneAluno0">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Email: </label>
+                      <input type="email" class="form-control" placeholder="email" name="emailAluno0" id="emailAluno0">
+                    </div>
                   </div>
-                  <div class="col-md-2">
-                    <label>Nome: </label>
-                    <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label>CPF:</label>
-                    <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Endereço: </label>
-                    <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Telefone: </label>
-                    <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Email: </label>
-                    <input type="email" class="form-control" placeholder="email" name="email">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-1">
-                    <label>Id:</label>
-                    <input type="number" class="form-control" placeholder="Id" name="idAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label>Nome: </label>
-                    <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label>CPF:</label>
-                    <input type="number" class="form-control" placeholder="CPF" name="cpfAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Endereço: </label>
-                    <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Telefone: </label>
-                    <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno">
-                  </div>
-                  <div class="col-md-2">
-                    <label> Email: </label>
-                    <input type="email" class="form-control" placeholder="email" name="email">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label>Id:</label>
+                      <input type="number" class="form-control" placeholder="Id" name="idAluno1" id="idAluno1" value="2">
+                    </div>
+                    <div class="col-md-2">
+                      <label>Nome: </label>
+                      <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno1" id="nameAluno1">
+                    </div>
+                    <div class="col-md-2">
+                      <label>CPF:</label>
+                      <input type="number" class="form-control" placeholder="CPF" name="cpfAluno1" id="cpfAluno1">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Endereço: </label>
+                      <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno1" id="enderecoAluno1">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Telefone: </label>
+                      <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno1" id="telefoneAluno1">
+                    </div>
+                    <div class="col-md-2">
+                      <label> Email: </label>
+                      <input type="email" class="form-control" placeholder="email" name="emailAluno1" id="emailAluno1">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -200,7 +161,7 @@
             <div class="form-group row mt-3">
               <label class="col-md-1 col-form-label text-md-right">Nome: </label>
               <div class="col-md-5">
-                <input type="text" class="form-control" placeholder="Nome" name="nomeDisciplina" id="nomeDisciplina">
+                <input type="text" class="form-control" placeholder="Nome" name="nomeDisciplina" id="nomeDisciplina" required>
               </div>
               <label class="col-md-1 col-form-label text-md-right">Descrição: </label>
               <div class="col-md-5">
@@ -230,27 +191,27 @@
             <div class="form-group row mt-3">
               <label class="col-md-1 col-form-label text-md-right">Nome: </label>
               <div class="col-md-5">
-                <input type="text" class="form-control" placeholder="Nome" name="nomeProfessor">
+                <input type="text" class="form-control" placeholder="Nome" name="nomeProfessor" id="nomeProfessor" required>
               </div>
               <label class="col-md-1 col-form-label text-md-right">CPF: </label>
               <div class="col-md-5">
-                <input type="number" class="form-control" placeholder="CPF" name="cpfProfessor">
+                <input type="number" class="form-control" placeholder="CPF" name="cpfProfessor" id="cpfProfessor" required>
               </div>
             </div>
             <div class="form-group row mt-3">
               <label class="col-md-1 col-form-label text-md-right">Email: </label>
               <div class="col-md-5">
-                <input type="email" class="form-control" placeholder="Email" name="emailProfessor">
+                <input type="email" class="form-control" placeholder="Email" name="emailProfessor" id="emailProfessor" required>
               </div>
               <label class="col-md-1 col-form-label text-md-right">Telefone: </label>
               <div class="col-md-5">
-                <input type="text" class="form-control" placeholder="Telefone" name="telefoneProfessor">
+                <input type="text" class="form-control" placeholder="Telefone" name="telefoneProfessor" id="telefoneProfessor" >
               </div>
             </div>
             <div class="form-group row mt-3">
               <label class="col-md-1 col-form-label text-md-right">Endereço: </label>
               <div class="col-md-8">
-                <input type="text" class="form-control" placeholder="Endereço" name="enderecoProfessor">
+                <input type="text" class="form-control" placeholder="Endereço" name="enderecoProfessor" id="enderecoProfessor">
               </div>
             </div>
           </div>
