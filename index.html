@@ -4,8 +4,7 @@
   </div>
   <div class="body">
     <div class="row" id="tabela_cadastro_aula">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-md-8" style="margin-left:18%;">
         <div class="card card-custom">
           <div class="card-header">
             <div class="card-title">
@@ -70,20 +69,18 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2"></div>
     </div>
     <div class="row" id="formulario_cadastro_aula" style="margin-top: 20px; display: none;">
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-8">
+      <div class="col-md-8" style="margin-left: 18%;">
         <form id="configuracao_aula" class="form">
           <div class="card card-custom">
             <div class="card-header">
               <div class="card-title">
                 <h3 class="card-label">Cadastro de Aulas</h3>
               </div>
-              <div class="card-toolbar">
+              <div class="card-toolbars">
                 <a onclick="cadastrarAula()" class="btn btn-primary font-weight-bolder">Cadastrar Aula</a>
+                <a onclick="voltarTabela()" class="btn btn-warning font-weight-bolder">Voltar</a>
               </div>
             </div>
             <div class="card-body">
@@ -189,18 +186,17 @@
     </div>
   </div>
   <div class="row" id="formulario_cadastro_disciplina" style="margin-top: 20px; display: none;">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-8" style="margin-left:18%;">
       <form id="configuracao_aula" class="form">
         <div class="card card-custom">
           <div class="card-header">
             <div class="card-title">
               <h3 class="card-label">Cadastro de Disciplina</h3>
             </div>
-            <div class="card-toolbar">
+            <div class="card-toolbars">
               <a onclick="cadastrarDisciplinaAtiva()" class="btn btn-primary font-weight-bolder">Cadastrar
                 Disciplina</a>
+              <a onclick="voltarFormulario()" class="btn btn-warning font-weight-bolder">Voltar</a>
             </div>
           </div>
           <div class="card-body">
@@ -219,5 +215,50 @@
       </form>
     </div>
   </div>
-</div>
+  <div class="row" id="formulario_cadastro_professor" style="margin-top: 20px; display: none;">
+    <div class="col-md-8" style="margin-left:2%;">
+      <form id="configuracao_aula" class="form">
+        <div class="card card-custom">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label">Cadastro de Professor</h3>
+            </div>
+            <div class="card-toolbars">
+              <a onclick="cadastrarProfessorAtiva()" class="btn btn-primary font-weight-bolder">Cadastrar
+                Professor</a>
+              <a onclick="voltarFormulario()" class="btn btn-warning font-weight-bolder">Voltar</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-group row mt-3">
+              <label class="col-md-1 col-form-label text-md-right">Nome: </label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Nome" name="nomeProfessor">
+              </div>
+              <label class="col-md-1 col-form-label text-md-right">CPF: </label>
+              <div class="col-md-5">
+                <input type="number" class="form-control" placeholder="CPF" name="cpfProfessor">
+              </div>
+            </div>
+            <div class="form-group row mt-3">
+              <label class="col-md-1 col-form-label text-md-right">Email: </label>
+              <div class="col-md-5">
+                <input type="email" class="form-control" placeholder="Email" name="emailProfessor">
+              </div>
+              <label class="col-md-1 col-form-label text-md-right">Telefone: </label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Telefone" name="telefoneProfessor">
+              </div>
+            </div>
+            <div class="form-group row mt-3">
+              <label class="col-md-1 col-form-label text-md-right">Endereço: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Endereço" name="enderecoProfessor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

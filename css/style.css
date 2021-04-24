@@ -28,3 +28,9 @@ h2 {
   left: 85%;
   top: 15%;
 }
+
+.card-toolbars {
+  position: absolute;
+  left: 80%;
+  top: 15%;
+}
