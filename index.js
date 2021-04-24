@@ -40,9 +40,29 @@ import "./js/bootstrap.js";
     formularioProfessor.style.display = "block";
   };
 
+  var cadastrarDisciplinaAtiva = function() {
+    var nome = document.getElementById("nomeDisciplina");
+    var descricao = document.getElementById("nomeDescricao");
+    var selectDisciplina = document.getElementById("disciplina");
+    var disciplina = [];
+
+    disciplina.push(nome.value);
+
+    for (var i = 0; i < disciplina.length; i++) {
+      selectDisciplina.append('<option value="' + disciplina[i] + '">' + disciplina[i] + '</option');
+    }
+
+    formularioDisciplina.style.display = "none";
+    formularioAula.style.display = "block";
+
+    nome.value = null;
+    descricao.value = null;
+  };
+
   (w.cadastrar = cadastrar),
     (w.voltarTabela = voltarTabela),
     (w.cadastrarDisciplina = cadastrarDisciplina),
     (w.voltarFormulario = voltarFormulario),
-    (w.cadastrarProfessor = cadastrarProfessor);
+    (w.cadastrarProfessor = cadastrarProfessor),
+    (w.cadastrarDisciplinaAtiva = cadastrarDisciplinaAtiva);
 })(window);
