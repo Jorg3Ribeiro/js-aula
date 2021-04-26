@@ -16,7 +16,6 @@ import "./js/bootstrap.js";
 
   var cont = 2;
   var click = 1;
-  
 
   var cadastrar = function() {
     tabela.style.display = "none";
@@ -154,7 +153,7 @@ import "./js/bootstrap.js";
   };
 
   var cadastrarAula = function() {
-    var tabelaDados = []
+    var tabelaDados = [];
     var dados = [];
     var disciplina = document.getElementById("disciplina");
     var professor = document.getElementById("professor");
@@ -162,8 +161,8 @@ import "./js/bootstrap.js";
 
     dados.push(disciplina.value);
     dados.push(professor.value);
-    disciplina.value = selected;
-    professor.value = selected;
+    disciplina.value = "selected";
+    professor.value = "selected";
 
     for (var i = 0; i < cont; i++) {
       var name = document.getElementById("nameAluno" + i);
@@ -211,7 +210,6 @@ import "./js/bootstrap.js";
       alunosTabela +
       "</td>" +
       "</tr>";
-    
 
     click = click + 1;
     cont = 2;
