@@ -154,7 +154,7 @@ import "./js/bootstrap.js";
   };
 
   var cadastrarAula = function() {
-    
+    var tabelaDados = []
     var dados = [];
     var disciplina = document.getElementById("disciplina");
     var professor = document.getElementById("professor");
