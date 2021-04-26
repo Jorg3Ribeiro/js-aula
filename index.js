@@ -162,8 +162,8 @@ import "./js/bootstrap.js";
 
     dados.push(disciplina.value);
     dados.push(professor.value);
-    disciplina.value = null;
-    professor.value = null;
+    disciplina.value = selected;
+    professor.value = selected;
 
     for (var i = 0; i < cont; i++) {
       var name = document.getElementById("nameAluno" + i);
