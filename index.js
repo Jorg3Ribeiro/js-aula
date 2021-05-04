@@ -98,7 +98,9 @@ import "./js/bootstrap.js";
 
     tabelaAlunos.appendChild(divNova);
     divNova.innerHTML =
-      `<div class="row">
+      `<div class="row" id="` +
+      (cont - 1) +
+      `">
                     <div class="col-md-1">
                       <label>Id:</label>
                       <input type="number" class="form-control" placeholder="Id" name="idAluno` +
@@ -155,6 +157,9 @@ import "./js/bootstrap.js";
 
                   </div>`;
   };
+  var excluirAluno = function(value) {
+    let testando = value;
+  };
 
   var cadastrarAula = function() {
     var tabelaDados = [];
@@ -196,7 +201,7 @@ import "./js/bootstrap.js";
     for (var k = 0; k < cont; k++) {
       alunosTabela.push(tabelaDados[0][k + 2]);
     }
-    if(click > 16 ){
+    if (click > 16) {
       var trNova = document.createElement("tr");
       tabelaAula.appendChild(trNova);
       trNova.innerHTML =
@@ -223,10 +228,6 @@ import "./js/bootstrap.js";
     tabela.style.display = "block";
   };
 
-  var excluirAluno = function(value){
-    let testando = value;
-  }
-
   (w.cadastrar = cadastrar),
     (w.voltarTabela = voltarTabela),
     (w.cadastrarDisciplina = cadastrarDisciplina),
@@ -235,6 +236,6 @@ import "./js/bootstrap.js";
     (w.cadastrarDisciplinaAtiva = cadastrarDisciplinaAtiva),
     (w.cadastrarProfessorAtiva = cadastrarProfessorAtiva),
     (w.adicionarAluno = adicionarAluno),
-    (w.cadastrarAula = cadastrarAula), 
+    (w.cadastrarAula = cadastrarAula),
     (w.excluirAluno = excluirAluno);
 })(window);
