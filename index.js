@@ -95,8 +95,8 @@ import "./js/bootstrap.js";
     var tabelaAlunos = document.getElementById("alunosTabela");
     var divNova = document.createElement("div");
 
-    cont = cont + 1;
     if (contAluno < 13) {
+      cont = cont + 1;
       tabelaAlunos.appendChild(divNova);
       divNova.innerHTML =
         `<div class="row" id="` +
