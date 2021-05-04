@@ -16,6 +16,7 @@ import "./js/bootstrap.js";
 
   var cont = 2;
   var click = 1;
+  var contAluno = 0;
 
   var cadastrar = function() {
     tabela.style.display = "none";
@@ -95,70 +96,81 @@ import "./js/bootstrap.js";
     var divNova = document.createElement("div");
 
     cont = cont + 1;
-
-    tabelaAlunos.appendChild(divNova);
-    divNova.innerHTML =
-      `<div class="row" id="` +
-      (cont - 1) +
-      `">
+    if (contAluno < 13) {
+      tabelaAlunos.appendChild(divNova);
+      divNova.innerHTML =
+        `<div class="row" id="` +
+        (cont - 1) +
+        `">
                     <div class="col-md-1">
                       <label>Id:</label>
                       <input type="number" class="form-control" placeholder="Id" name="idAluno` +
-      (cont - 1) +
-      `" id="idAluno` +
-      (cont - 1) +
-      `" value="` +
-      cont +
-      `">
+        (cont - 1) +
+        `" id="idAluno` +
+        (cont - 1) +
+        `" value="` +
+        cont +
+        `">
                     </div>
                     <div class="col-md-2">
                       <label>Nome: </label>
                       <input type="text" class="form-control" placeholder="Nome Completo" name="nameAluno` +
-      (cont - 1) +
-      `" id="nameAluno` +
-      (cont - 1) +
-      `">
+        (cont - 1) +
+        `" id="nameAluno` +
+        (cont - 1) +
+        `">
                     </div>
                     <div class="col-md-2">
                       <label>CPF:</label>
                       <input type="number" class="form-control" placeholder="CPF" name="cpfAluno` +
-      (cont - 1) +
-      `" id="cpfAluno` +
-      (cont - 1) +
-      `">
+        (cont - 1) +
+        `" id="cpfAluno` +
+        (cont - 1) +
+        `">
                     </div>
                     <div class="col-md-2">
                       <label> Endereço: </label>
                       <input type="text" class="form-control" placeholder="Endereço" name="enderecoAluno` +
-      (cont - 1) +
-      `" id="enderecoAluno` +
-      (cont - 1) +
-      `">
+        (cont - 1) +
+        `" id="enderecoAluno` +
+        (cont - 1) +
+        `">
                     </div>
                     <div class="col-md-2">
                       <label> Telefone: </label>
                       <input type="number" class="form-control" placeholder="Telefone" name="telefoneAluno` +
-      (cont - 1) +
-      `" id="telefoneAluno` +
-      (cont - 1) +
-      `">
+        (cont - 1) +
+        `" id="telefoneAluno` +
+        (cont - 1) +
+        `">
                     </div>
                     <div class="col-md-2">
                       <label> Email: </label>
                       <input type="email" class="form-control" placeholder="email" name="emailAluno` +
-      (cont - 1) +
-      `" id="emailAluno` +
-      (cont - 1) +
-      `">
+        (cont - 1) +
+        `" id="emailAluno` +
+        (cont - 1) +
+        `">
                     </div>
                     <div class="col-md-1">
-                    <button type="button" onclick="excluirAluno(this)" class="btn btn-danger" style=" margin-top: 22px;"> X </button>
+                    <button type="button" onclick="excluirAluno(` +
+        (cont - 1) +
+        `)" class="btn btn-danger" style=" margin-top: 22px;"> X </button>
                     </div>
 
                   </div>`;
+
+      contAluno = contAluno + 1;
+    } else {
+      alert("Não é posivel adicionar mais aluno");
+    }
   };
   var excluirAluno = function(value) {
-    let testando = value;
+    var node = document.getElementById(value);
+    if (node.parentNode) {
+      node.parentNode.removeChild(node);
+      contAluno = contAluno - 1;
+    }
   };
 
   var cadastrarAula = function() {
