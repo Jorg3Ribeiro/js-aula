@@ -149,6 +149,10 @@ import "./js/bootstrap.js";
       (cont - 1) +
       `">
                     </div>
+                    <div class="col-md-1">
+                    <button type="button" onclick="excluirAluno(this)" class="btn btn-danger" style=" margin-top: 22px;"> X </button>
+                    </div>
+
                   </div>`;
   };
 
@@ -192,31 +196,36 @@ import "./js/bootstrap.js";
     for (var k = 0; k < cont; k++) {
       alunosTabela.push(tabelaDados[0][k + 2]);
     }
+    if(click > 16 ){
+      var trNova = document.createElement("tr");
+      tabelaAula.appendChild(trNova);
+      trNova.innerHTML =
+        "<tr>" +
+        "<td>" +
+        click +
+        "</td>" +
+        "<td>" +
+        professorTabela +
+        "</td>" +
+        "<td>" +
+        disciplinaTabela +
+        "</td>" +
+        "<td>" +
+        alunosTabela +
+        "</td>" +
+        "</tr>";
 
-    var trNova = document.createElement("tr");
-    tabelaAula.appendChild(trNova);
-    trNova.innerHTML =
-      "<tr>" +
-      "<td>" +
-      click +
-      "</td>" +
-      "<td>" +
-      professorTabela +
-      "</td>" +
-      "<td>" +
-      disciplinaTabela +
-      "</td>" +
-      "<td>" +
-      alunosTabela +
-      "</td>" +
-      "</tr>";
-
-    click = click + 1;
-    cont = 2;
+      click = click + 1;
+      cont = 2;
+    }
 
     formularioAula.style.display = "none";
     tabela.style.display = "block";
   };
+
+  var excluirAluno = function(value){
+    let testando = value;
+  }
 
   (w.cadastrar = cadastrar),
     (w.voltarTabela = voltarTabela),
@@ -226,5 +235,6 @@ import "./js/bootstrap.js";
     (w.cadastrarDisciplinaAtiva = cadastrarDisciplinaAtiva),
     (w.cadastrarProfessorAtiva = cadastrarProfessorAtiva),
     (w.adicionarAluno = adicionarAluno),
-    (w.cadastrarAula = cadastrarAula);
+    (w.cadastrarAula = cadastrarAula), 
+    (w.excluirAluno = excluirAluno);
 })(window);
